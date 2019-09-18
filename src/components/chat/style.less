@@ -1,0 +1,46 @@
+.chat {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 576px) {
+        height: 90vh;
+    }
+
+    &-top {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            flex: 1;
+        }
+    }
+}
+
+.message-log {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 8px;
+
+    .message {
+        padding: 8px;
+        border: 1px solid gray;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        background-color: rgb(234,255,247);
+        width: fit-content;
+
+        &.own {
+            background-color: #f8f8f8;
+        }
+
+        .user {
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .time {
+            color: gray;
+            font-size: 0.8em;
+        }
+    }
+}
